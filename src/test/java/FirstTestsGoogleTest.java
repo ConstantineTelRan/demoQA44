@@ -1,6 +1,6 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -25,18 +25,29 @@ public class FirstTestsGoogleTest {
         driver.get("https://www.google.com/");
     }
 
+    @AfterMethod
+    public void tearDown(){
+        driver.quit();
+    }
+
     @Test
     public void shouldBeRightTitle() {
         title = driver.getTitle();
         Assert.assertEquals(title, "Google", "The page contains a wrong title");
     }
 
+    @Test
+    public void searchGoogle() {
+//        driver.findElement(By.id("L2AGLb")).click();
+        driver.findElement(By.name("q")).clear();
+        driver.findElement(By.name("q")).sendKeys("Tel-Ran");
+        driver.findElement(By.name("btnK")).click();
 
-    @AfterMethod
-    public void tearDown(){
-        driver.quit();
+        Assert.assertTrue(driver.getPageSource().contains("Tel-Ran.de"), "The expected text was not in the search page");
+
+        String actualText = driver.findElement(By.id("hdtb-tls")).getText();
+        String expectedText = "Куралдар";
+        Assert.assertEquals(actualText, expectedText, "Фактический текст не соответствует ожидаемому");
     }
-
-
 
 }
