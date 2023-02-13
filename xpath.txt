@@ -1,0 +1,12 @@
+//*[@id='defaultRegisterFormEmail'] (Поиск Maill)
+//*[@name='password'] (Поиск Password)
+//*[@class='btn btn-info my-1 btn-block'] (Поиск Login)
+//*[text()='Register new Account']
+//*[text()='Forgot password?']
+
+//*[@id='form-name'] (Поиск поля Name)
+//*[@id='form-lastName'] (Поиск поля last-name)
+//*[@class='form-control ng-pristine ng-valid ng-touched'] (Поиск About)
+//*[@type='reset']  (Поиск cancel)
+//*[@id='form-about'] (Поиск save)
+//span[@aria-hidden="true"]
