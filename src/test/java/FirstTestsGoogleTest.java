@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class FirstTestsGoogleTest {
+public class FirstTestsGoogleTest{
     // before test method setUp
 
     //Tests
@@ -17,18 +17,6 @@ public class FirstTestsGoogleTest {
     WebDriver driver;
     String title;
 
-    @BeforeMethod
-    public void setUp() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get("https://www.google.com/");
-    }
-
-    @AfterMethod
-    public void tearDown(){
-        driver.quit();
-    }
 
     @Test
     public void shouldBeRightTitle() {
