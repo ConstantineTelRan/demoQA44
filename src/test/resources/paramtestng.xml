@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="Param1">
+        <parameter name="x" value="1" />
+        <parameter name="y" value="2" />
+        <parameter name="z" value="3" />
+
+        <classes>
+            <class name="ExampleTest">
+                <methods>
+                    <include name="paramTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Param2">
+        <parameter name="x" value="8" />
+        <parameter name="y" value="10" />
+        <parameter name="z" value="18" />
+
+        <classes>
+            <class name="ExampleTest">
+                <methods>
+                    <include name="paramTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Param3">
+        <parameter name="x" value="18" />
+        <parameter name="y" value="20" />
+        <parameter name="z" value="38" />
+
+        <classes>
+            <class name="ExampleTest">
+                <methods>
+                    <include name="paramTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Param4">
+        <parameter name="x" value="5" />
+        <parameter name="y" value="4" />
+        <parameter name="z" value="9" />
+
+        <classes>
+            <class name="ExampleTest">
+                <methods>
+                    <include name="paramTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
